@@ -1,0 +1,52 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "still.png"
+    },
+    "_meta": {
+      "title": "IMAGE"
+    }
+  },
+  "2": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "reference.png"
+    },
+    "_meta": {
+      "title": "REFERENCE"
+    }
+  },
+  "3": {
+    "class_type": "FalAnyEndpoint_fal",
+    "inputs": {
+      "endpoint_id": "fal-ai/flux-2/klein/9b/edit",
+      "arguments_json": "{\"prompt\": \"Change only ... Keep everything else in image 1 exactly the same.\", \"image_size\": {\"width\": 1664, \"height\": 960}, \"num_inference_steps\": 4, \"output_format\": \"png\", \"enable_safety_checker\": false}",
+      "image": [
+        "1",
+        0
+      ],
+      "image_2": [
+        "2",
+        0
+      ],
+      "seed": 1
+    },
+    "_meta": {
+      "title": "PROMPT"
+    }
+  },
+  "4": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "3",
+        0
+      ],
+      "filename_prefix": "short-videos/edit-fal"
+    },
+    "_meta": {
+      "title": "SAVE"
+    }
+  }
+}

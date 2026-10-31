@@ -1,0 +1,523 @@
+{
+ "id": "99031d34-50fe-42dc-879a-6932879f694e",
+ "revision": 0,
+ "last_node_id": 3,
+ "last_link_id": 1,
+ "nodes": [
+  {
+   "id": 1,
+   "type": "FalAPI_fal-ai-ace-step",
+   "pos": [
+    100,
+    130
+   ],
+   "size": [
+    400,
+    468
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "showAdvanced": null,
+   "inputs": [
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "localized_name": "tags",
+     "locked": null,
+     "name": "tags",
+     "nameLocked": null,
+     "removable": null,
+     "shape": null,
+     "type": "STRING",
+     "widget": {
+      "name": "tags"
+     },
+     "link": null
+    },
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "localized_name": "lyrics",
+     "locked": null,
+     "name": "lyrics",
+     "nameLocked": null,
+     "removable": null,
+     "shape": 7,
+     "type": "STRING",
+     "widget": {
+      "name": "lyrics"
+     },
+     "link": null
+    },
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "localized_name": "duration",
+     "locked": null,
+     "name": "duration",
+     "nameLocked": null,
+     "removable": null,
+     "shape": 7,
+     "type": "FLOAT",
+     "widget": {
+      "name": "duration"
+     },
+     "link": null
+    },
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "localized_name": "number_of_steps",
+     "locked": null,
+     "name": "number_of_steps",
+     "nameLocked": null,
+     "removable": null,
+     "shape": 7,
+     "type": "INT",
+     "widget": {
+      "name": "number_of_steps"
+     },
+     "link": null
+    },
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "localized_name": "seed",
+     "locked": null,
+     "name": "seed",
+     "nameLocked": null,
+     "removable": null,
+     "shape": 7,
+     "type": "INT",
+     "widget": {
+      "name": "seed"
+     },
+     "link": null
+    },
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "localized_name": "scheduler",
+     "locked": null,
+     "name": "scheduler",
+     "nameLocked": null,
+     "removable": null,
+     "shape": 7,
+     "type": "COMBO",
+     "widget": {
+      "name": "scheduler"
+     },
+     "link": null
+    },
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "localized_name": "guidance_type",
+     "locked": null,
+     "name": "guidance_type",
+     "nameLocked": null,
+     "removable": null,
+     "shape": 7,
+     "type": "COMBO",
+     "widget": {
+      "name": "guidance_type"
+     },
+     "link": null
+    },
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "localized_name": "granularity_scale",
+     "locked": null,
+     "name": "granularity_scale",
+     "nameLocked": null,
+     "removable": null,
+     "shape": 7,
+     "type": "INT",
+     "widget": {
+      "name": "granularity_scale"
+     },
+     "link": null
+    },
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "localized_name": "guidance_interval",
+     "locked": null,
+     "name": "guidance_interval",
+     "nameLocked": null,
+     "removable": null,
+     "shape": 7,
+     "type": "FLOAT",
+     "widget": {
+      "name": "guidance_interval"
+     },
+     "link": null
+    },
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "localized_name": "guidance_interval_decay",
+     "locked": null,
+     "name": "guidance_interval_decay",
+     "nameLocked": null,
+     "removable": null,
+     "shape": 7,
+     "type": "FLOAT",
+     "widget": {
+      "name": "guidance_interval_decay"
+     },
+     "link": null
+    },
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "localized_name": "guidance_scale",
+     "locked": null,
+     "name": "guidance_scale",
+     "nameLocked": null,
+     "removable": null,
+     "shape": 7,
+     "type": "FLOAT",
+     "widget": {
+      "name": "guidance_scale"
+     },
+     "link": null
+    },
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "localized_name": "minimum_guidance_scale",
+     "locked": null,
+     "name": "minimum_guidance_scale",
+     "nameLocked": null,
+     "removable": null,
+     "shape": 7,
+     "type": "FLOAT",
+     "widget": {
+      "name": "minimum_guidance_scale"
+     },
+     "link": null
+    },
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "localized_name": "tag_guidance_scale",
+     "locked": null,
+     "name": "tag_guidance_scale",
+     "nameLocked": null,
+     "removable": null,
+     "shape": 7,
+     "type": "FLOAT",
+     "widget": {
+      "name": "tag_guidance_scale"
+     },
+     "link": null
+    },
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "localized_name": "lyric_guidance_scale",
+     "locked": null,
+     "name": "lyric_guidance_scale",
+     "nameLocked": null,
+     "removable": null,
+     "shape": 7,
+     "type": "FLOAT",
+     "widget": {
+      "name": "lyric_guidance_scale"
+     },
+     "link": null
+    },
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "localized_name": "force_rerun",
+     "locked": null,
+     "name": "force_rerun",
+     "nameLocked": null,
+     "removable": null,
+     "shape": 7,
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "force_rerun"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "localized_name": "audio",
+     "locked": null,
+     "name": "audio",
+     "nameLocked": null,
+     "removable": null,
+     "shape": null,
+     "type": "AUDIO",
+     "pos": null,
+     "slot_index": null,
+     "links": [
+      1
+     ]
+    },
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "localized_name": "audio_url",
+     "locked": null,
+     "name": "audio_url",
+     "nameLocked": null,
+     "removable": null,
+     "shape": null,
+     "type": "STRING",
+     "pos": null,
+     "slot_index": null,
+     "links": null
+    }
+   ],
+   "title": "SONG",
+   "properties": {
+    "cnr_id": "fal-api",
+    "ver": "ef7c1214156b310d762c6456aedf26de62cc06c0",
+    "Node name for S&R": "FalAPI_fal-ai-ace-step"
+   },
+   "widgets_values": [
+    "genre, mood, tempo, instruments, voice",
+    "[verse]\nFirst line\nSecond line\n\n[chorus]\nChorus line",
+    120,
+    27,
+    1,
+    "randomize",
+    "euler",
+    "apg",
+    10,
+    0.5,
+    0,
+    15,
+    3,
+    5,
+    1.5,
+    false
+   ],
+   "widgets_values_named": {
+    "tags": "genre, mood, tempo, instruments, voice",
+    "lyrics": "[verse]\nFirst line\nSecond line\n\n[chorus]\nChorus line",
+    "duration": 120,
+    "number_of_steps": 27,
+    "seed": 1,
+    "control_after_generate": "randomize",
+    "scheduler": "euler",
+    "guidance_type": "apg",
+    "granularity_scale": 10,
+    "guidance_interval": 0.5,
+    "guidance_interval_decay": 0,
+    "guidance_scale": 15,
+    "minimum_guidance_scale": 3,
+    "tag_guidance_scale": 5,
+    "lyric_guidance_scale": 1.5,
+    "force_rerun": false
+   }
+  },
+  {
+   "id": 2,
+   "type": "SaveAudioAdvanced",
+   "pos": [
+    600,
+    130
+   ],
+   "size": [
+    270,
+    136
+   ],
+   "flags": {},
+   "order": 1,
+   "mode": 0,
+   "showAdvanced": null,
+   "inputs": [
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "localized_name": "audio",
+     "locked": null,
+     "name": "audio",
+     "nameLocked": null,
+     "removable": null,
+     "shape": null,
+     "type": "AUDIO",
+     "pos": null,
+     "link": 1
+    },
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "localized_name": "filename_prefix",
+     "locked": null,
+     "name": "filename_prefix",
+     "nameLocked": null,
+     "removable": null,
+     "shape": null,
+     "type": "STRING",
+     "widget": {
+      "name": "filename_prefix"
+     },
+     "link": null
+    },
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "localized_name": "format",
+     "locked": null,
+     "name": "format",
+     "nameLocked": null,
+     "removable": null,
+     "shape": null,
+     "type": "COMFY_DYNAMICCOMBO_V3",
+     "widget": {
+      "name": "format"
+     },
+     "link": null
+    },
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "localized_name": "audioUI",
+     "locked": null,
+     "name": "audioUI",
+     "nameLocked": null,
+     "removable": null,
+     "shape": null,
+     "type": "AUDIO_UI",
+     "widget": {
+      "name": "audioUI"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "localized_name": "audio",
+     "locked": null,
+     "name": "audio",
+     "nameLocked": null,
+     "removable": null,
+     "shape": null,
+     "type": "AUDIO",
+     "pos": null,
+     "slot_index": null,
+     "links": null
+    }
+   ],
+   "title": "SAVE",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.43.2",
+    "Node name for S&R": "SaveAudioAdvanced"
+   },
+   "widgets_values": [
+    "short-videos/song-ace-fal",
+    "flac"
+   ],
+   "widgets_values_named": {
+    "filename_prefix": "short-videos/song-ace-fal",
+    "format": "flac"
+   }
+  },
+  {
+   "id": 3,
+   "type": "MarkdownNote",
+   "pos": [
+    100,
+    -290
+   ],
+   "size": [
+    560,
+    380
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "properties": {},
+   "widgets_values": [
+    "## song-ace-step-fal\n\nSong (ACE-Step on fal; this endpoint is the older ACE-Step v1). Needs FAL_KEY. Check every take with scripts/slots.py.\n\nInputs in CAPITALS are the ones scripts/run_workflow.py sets."
+   ],
+   "color": "#432",
+   "bgcolor": "#653"
+  }
+ ],
+ "links": [
+  [
+   1,
+   1,
+   0,
+   2,
+   0,
+   "AUDIO"
+  ]
+ ],
+ "floatingLinks": null,
+ "groups": [],
+ "definitions": null,
+ "config": {},
+ "extra": {
+  "ds": {
+   "scale": 1,
+   "offset": [
+    0,
+    0
+   ]
+  },
+  "reroutes": null
+ },
+ "version": 0.4
+}

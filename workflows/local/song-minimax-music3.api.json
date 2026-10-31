@@ -1,0 +1,152 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "minimax_music3_dit_fp16.safetensors",
+      "weight_dtype": "default"
+    },
+    "_meta": {
+      "title": "UNETLoader"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "minimax_music3_text_encoder_pruned_int8_convrot.safetensors",
+      "type": "minimax",
+      "device": "default"
+    },
+    "_meta": {
+      "title": "CLIPLoader"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_music3_dav.safetensors"
+    },
+    "_meta": {
+      "title": "VAELoader"
+    }
+  },
+  "4": {
+    "class_type": "PrimitiveInt",
+    "inputs": {
+      "value": 1
+    },
+    "_meta": {
+      "title": "SEED"
+    }
+  },
+  "5": {
+    "class_type": "MiniMaxMusic3TextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "caption": "Global Metadata: genre, tempo, key, length.\nVocal Details: voice and delivery.\nArrangement: instruments and how the song builds.",
+      "lyrics": "[Verse 1]\nFirst line\nSecond line\n\n[Chorus]\nChorus line",
+      "seed": [
+        "4",
+        0
+      ],
+      "max_duration": 180.0,
+      "cfg_scale": 1.7,
+      "top_k": 50
+    },
+    "_meta": {
+      "title": "SONG"
+    }
+  },
+  "6": {
+    "class_type": "ConditioningZeroOut",
+    "inputs": {
+      "conditioning": [
+        "5",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "7": {
+    "class_type": "EmptyMiniMaxMusic3LatentAudio",
+    "inputs": {
+      "seconds": [
+        "5",
+        1
+      ],
+      "batch_size": 1
+    },
+    "_meta": {
+      "title": "EmptyMiniMaxMusic3LatentAudio"
+    }
+  },
+  "8": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "seed": [
+        "4",
+        0
+      ],
+      "steps": 30,
+      "cfg": 1.7,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "positive": [
+        "5",
+        0
+      ],
+      "negative": [
+        "6",
+        0
+      ],
+      "latent_image": [
+        "7",
+        0
+      ],
+      "denoise": 1.0
+    },
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "9": {
+    "class_type": "VAEDecodeAudioTiled",
+    "inputs": {
+      "samples": [
+        "8",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "tile_size": 1536,
+      "overlap": 64
+    },
+    "_meta": {
+      "title": "VAEDecodeAudioTiled"
+    }
+  },
+  "10": {
+    "class_type": "SaveAudioAdvanced",
+    "inputs": {
+      "audio": [
+        "9",
+        0
+      ],
+      "filename_prefix": "short-videos/song-mm3",
+      "format": "flac"
+    },
+    "_meta": {
+      "title": "SAVE"
+    }
+  }
+}

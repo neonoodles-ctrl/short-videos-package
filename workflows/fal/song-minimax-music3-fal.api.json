@@ -1,0 +1,28 @@
+{
+  "1": {
+    "class_type": "FalAPI_minimax-music-3",
+    "inputs": {
+      "prompt": "Global Metadata: genre, tempo, key, length.\nVocal Details: voice and delivery.\nArrangement: instruments and how the song builds.",
+      "lyrics": "[Verse 1]\nFirst line\nSecond line\n\n[Chorus]\nChorus line",
+      "duration": 120.0,
+      "seed": 1
+    },
+    "_meta": {
+      "title": "SONG"
+    }
+  },
+  "2": {
+    "class_type": "SaveAudioAdvanced",
+    "inputs": {
+      "audio": [
+        "1",
+        0
+      ],
+      "filename_prefix": "short-videos/song-mm3-fal",
+      "format": "flac"
+    },
+    "_meta": {
+      "title": "SAVE"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "still.png"
+    },
+    "_meta": {
+      "title": "START_FRAME"
+    }
+  },
+  "2": {
+    "class_type": "FalAPI_minimax-h3-max-image-to-video",
+    "inputs": {
+      "prompt": "Describe the one movement here.",
+      "prompt_expansion_mode": "balanced",
+      "duration": 5,
+      "resolution": "480P",
+      "seed": 1,
+      "enable_safety_checker": false,
+      "image_url": [
+        "1",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "PROMPT"
+    }
+  },
+  "3": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "2",
+        0
+      ],
+      "filename_prefix": "short-videos/clip-h3-fal",
+      "format": "mp4",
+      "format.codec": "h264"
+    },
+    "_meta": {
+      "title": "SAVE"
+    }
+  }
+}

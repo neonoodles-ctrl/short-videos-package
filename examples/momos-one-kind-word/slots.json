@@ -1,0 +1,235 @@
+{
+  "song": "examples/momos-one-kind-word/song.mp3",
+  "song_seconds": 85.0,
+  "words_heard": "92/97",
+  "words_heard_without_hint": "92/97",
+  "missing_lines": [],
+  "lines": [
+    {
+      "line": 1,
+      "text": "Momo stays up late tonight.",
+      "words": 5,
+      "heard": 5,
+      "start": 7.96,
+      "end": 11.76,
+      "heard_without_hint": 5
+    },
+    {
+      "line": 2,
+      "text": "One small lamp is shining bright.",
+      "words": 6,
+      "heard": 6,
+      "start": 12.56,
+      "end": 15.96,
+      "heard_without_hint": 6
+    },
+    {
+      "line": 3,
+      "text": "One blanket lies on a shelf.",
+      "words": 6,
+      "heard": 6,
+      "start": 16.86,
+      "end": 20.22,
+      "heard_without_hint": 6
+    },
+    {
+      "line": 4,
+      "text": "Momo wraps it round herself.",
+      "words": 5,
+      "heard": 5,
+      "start": 20.22,
+      "end": 24.54,
+      "heard_without_hint": 5
+    },
+    {
+      "line": 5,
+      "text": "One small cushion sits alone.",
+      "words": 5,
+      "heard": 5,
+      "start": 26.28,
+      "end": 30.72,
+      "heard_without_hint": 5
+    },
+    {
+      "line": 6,
+      "text": "Momo holds it as her own.",
+      "words": 6,
+      "heard": 6,
+      "start": 30.72,
+      "end": 34.9,
+      "heard_without_hint": 6
+    },
+    {
+      "line": 7,
+      "text": "One wide chair waits in the glow.",
+      "words": 7,
+      "heard": 6,
+      "start": 34.9,
+      "end": 39.08,
+      "heard_without_hint": 6
+    },
+    {
+      "line": 8,
+      "text": "Momo rocks herself so slow.",
+      "words": 5,
+      "heard": 5,
+      "start": 39.08,
+      "end": 43.36,
+      "heard_without_hint": 5
+    },
+    {
+      "line": 9,
+      "text": "One thick quilt lies on a seat.",
+      "words": 7,
+      "heard": 7,
+      "start": 45.06,
+      "end": 49.48,
+      "heard_without_hint": 7
+    },
+    {
+      "line": 10,
+      "text": "Momo tucks it round her feet.",
+      "words": 6,
+      "heard": 6,
+      "start": 49.48,
+      "end": 53.58,
+      "heard_without_hint": 5
+    },
+    {
+      "line": 11,
+      "text": "Momo helps her friends all day.",
+      "words": 6,
+      "heard": 6,
+      "start": 53.58,
+      "end": 57.84,
+      "heard_without_hint": 6
+    },
+    {
+      "line": 12,
+      "text": "Now she helps herself this way.",
+      "words": 6,
+      "heard": 6,
+      "start": 57.84,
+      "end": 62.36,
+      "heard_without_hint": 6
+    },
+    {
+      "line": 13,
+      "text": "Momo takes her time to rest.",
+      "words": 6,
+      "heard": 6,
+      "start": 66.56,
+      "end": 70.4,
+      "heard_without_hint": 6
+    },
+    {
+      "line": 14,
+      "text": "Slow and soft is what is best.",
+      "words": 7,
+      "heard": 7,
+      "start": 70.4,
+      "end": 74.56,
+      "heard_without_hint": 7
+    },
+    {
+      "line": 15,
+      "text": "One warm word stays in her head.",
+      "words": 7,
+      "heard": 7,
+      "start": 74.56,
+      "end": 78.72,
+      "heard_without_hint": 7
+    },
+    {
+      "line": 16,
+      "text": "'You are kind.' Then off to bed.",
+      "words": 7,
+      "heard": 3,
+      "start": 78.72,
+      "end": 82.28,
+      "heard_without_hint": 4
+    }
+  ],
+  "shots": [
+    {
+      "shot": 1,
+      "lines": [
+        1,
+        2
+      ],
+      "start": 0.0,
+      "end": 16.61,
+      "duration": 16.61
+    },
+    {
+      "shot": 2,
+      "lines": [
+        3,
+        4
+      ],
+      "start": 16.61,
+      "end": 26.03,
+      "duration": 9.42
+    },
+    {
+      "shot": 3,
+      "lines": [
+        5,
+        6
+      ],
+      "start": 26.03,
+      "end": 34.65,
+      "duration": 8.62
+    },
+    {
+      "shot": 4,
+      "lines": [
+        7,
+        8
+      ],
+      "start": 34.65,
+      "end": 44.81,
+      "duration": 10.16
+    },
+    {
+      "shot": 5,
+      "lines": [
+        9,
+        10
+      ],
+      "start": 44.81,
+      "end": 53.33,
+      "duration": 8.52
+    },
+    {
+      "shot": 6,
+      "lines": [
+        11,
+        12
+      ],
+      "start": 53.33,
+      "end": 66.31,
+      "duration": 12.98
+    },
+    {
+      "shot": 7,
+      "lines": [
+        13,
+        14
+      ],
+      "start": 66.31,
+      "end": 74.31,
+      "duration": 8.0
+    },
+    {
+      "shot": 8,
+      "lines": [
+        15,
+        16
+      ],
+      "start": 74.31,
+      "end": 85.0,
+      "duration": 10.69
+    }
+  ]
+}

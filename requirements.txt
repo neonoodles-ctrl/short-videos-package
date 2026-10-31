@@ -1,0 +1,3 @@
+# scripts/slots.py hears the song with Whisper. The other scripts use only the Python
+# standard library plus ffmpeg and ffprobe on PATH.
+faster-whisper>=1.2

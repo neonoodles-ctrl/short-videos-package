@@ -1,0 +1,29 @@
+{
+  "1": {
+    "class_type": "FalAPI_fal-ai-ace-step",
+    "inputs": {
+      "tags": "genre, mood, tempo, instruments, voice",
+      "lyrics": "[verse]\nFirst line\nSecond line\n\n[chorus]\nChorus line",
+      "duration": 120.0,
+      "number_of_steps": 27,
+      "seed": 1
+    },
+    "_meta": {
+      "title": "SONG"
+    }
+  },
+  "2": {
+    "class_type": "SaveAudioAdvanced",
+    "inputs": {
+      "audio": [
+        "1",
+        0
+      ],
+      "filename_prefix": "short-videos/song-ace-fal",
+      "format": "flac"
+    },
+    "_meta": {
+      "title": "SAVE"
+    }
+  }
+}

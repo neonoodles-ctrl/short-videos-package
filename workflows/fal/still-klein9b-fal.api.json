@@ -1,0 +1,45 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "reference.png"
+    },
+    "_meta": {
+      "title": "REFERENCE"
+    }
+  },
+  "2": {
+    "class_type": "FalAPI_fal-ai-flux-2-klein-9b-edit",
+    "inputs": {
+      "prompt": "Describe the whole picture here.",
+      "image_urls": [
+        "1",
+        0
+      ],
+      "seed": 1,
+      "num_inference_steps": 4,
+      "image_size": "custom_size",
+      "width": 1664,
+      "height": 960,
+      "num_images": 1,
+      "output_format": "png",
+      "enable_safety_checker": false
+    },
+    "_meta": {
+      "title": "PROMPT"
+    }
+  },
+  "3": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "2",
+        0
+      ],
+      "filename_prefix": "short-videos/still-fal"
+    },
+    "_meta": {
+      "title": "SAVE"
+    }
+  }
+}

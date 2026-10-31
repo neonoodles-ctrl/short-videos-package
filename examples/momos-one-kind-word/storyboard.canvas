@@ -1,0 +1,360 @@
+{
+ "nodes": [
+  {
+   "id": "title",
+   "type": "text",
+   "x": 0,
+   "y": -220,
+   "width": 1040,
+   "height": 160,
+   "text": "# Momo's One Kind Word\n\nStoryboard from `episode.md`. Re-run scripts/storyboard.py after each render."
+  },
+  {
+   "id": "shot-01",
+   "type": "group",
+   "label": "Shot 1",
+   "x": -30,
+   "y": -30,
+   "width": 580,
+   "height": 2440
+  },
+  {
+   "id": "shot-01-text",
+   "type": "text",
+   "x": 0,
+   "y": 0,
+   "width": 520,
+   "height": 420,
+   "text": "## Shot 1: Still awake\n\n> 1. Momo stays up late tonight.\n> 2. One small lamp is shining bright.\n\n**Still:** Wide. Momo stands small in the middle of the wooden aisle, full body, facing the camera, eyes open. One small lamp on a low table at the left throws warm light across her; tall shelves of plain books stay dim on both sides.\n\n**Movement:** The camera pushes in slowly toward Momo.\n\n**Sings on screen:** no"
+  },
+  {
+   "id": "shot-01-still",
+   "type": "file",
+   "file": "examples/momos-one-kind-word/stills/shot-01.png",
+   "x": 0,
+   "y": 480,
+   "width": 520,
+   "height": 920
+  },
+  {
+   "id": "shot-01-clip",
+   "type": "text",
+   "x": 0,
+   "y": 1460,
+   "width": 520,
+   "height": 920,
+   "text": "*No clip yet* (shot-01)",
+   "color": "4"
+  },
+  {
+   "id": "shot-02",
+   "type": "group",
+   "label": "Shot 2",
+   "x": 610,
+   "y": -30,
+   "width": 580,
+   "height": 2440
+  },
+  {
+   "id": "shot-02-text",
+   "type": "text",
+   "x": 640,
+   "y": 0,
+   "width": 520,
+   "height": 420,
+   "text": "## Shot 2: Blanket\n\n> 3. One blanket lies on a shelf.\n> 4. Momo wraps it round herself.\n\n**Still:** Medium. Momo at a shelf on the right, three-quarters to camera, one knitted blanket half over her shoulder, the rest still on the shelf.\n\n**Movement:** Her arms draw the blanket round her shoulders.\n\n**Sings on screen:** no"
+  },
+  {
+   "id": "shot-02-still",
+   "type": "file",
+   "file": "examples/momos-one-kind-word/stills/shot-02.png",
+   "x": 640,
+   "y": 480,
+   "width": 520,
+   "height": 920
+  },
+  {
+   "id": "shot-02-clip",
+   "type": "text",
+   "x": 640,
+   "y": 1460,
+   "width": 520,
+   "height": 920,
+   "text": "*No clip yet* (shot-02)",
+   "color": "4"
+  },
+  {
+   "id": "shot-03",
+   "type": "group",
+   "label": "Shot 3",
+   "x": 1250,
+   "y": -30,
+   "width": 580,
+   "height": 2440
+  },
+  {
+   "id": "shot-03-text",
+   "type": "text",
+   "x": 1280,
+   "y": 0,
+   "width": 520,
+   "height": 420,
+   "text": "## Shot 3: Cushion\n\n> 5. One small cushion sits alone.\n> 6. Momo holds it as her own.\n\n**Still:** Medium, low angle. Momo kneels on the floorboards with the blanket round her shoulders, hugging one small coral cushion against her chest, eyes soft.\n\n**Movement:** The camera pushes in slowly; she stays still and blinks.\n\n**Sings on screen:** no"
+  },
+  {
+   "id": "shot-03-still",
+   "type": "file",
+   "file": "examples/momos-one-kind-word/stills/shot-03.png",
+   "x": 1280,
+   "y": 480,
+   "width": 520,
+   "height": 920
+  },
+  {
+   "id": "shot-03-clip",
+   "type": "text",
+   "x": 1280,
+   "y": 1460,
+   "width": 520,
+   "height": 920,
+   "text": "*No clip yet* (shot-03)",
+   "color": "4"
+  },
+  {
+   "id": "shot-04",
+   "type": "group",
+   "label": "Shot 4",
+   "x": 1890,
+   "y": -30,
+   "width": 580,
+   "height": 2440
+  },
+  {
+   "id": "shot-04-text",
+   "type": "text",
+   "x": 1920,
+   "y": 0,
+   "width": 520,
+   "height": 420,
+   "text": "## Shot 4: Rocking chair\n\n> 7. One wide chair waits in the glow.\n> 8. Momo rocks herself so slow.\n\n**Still:** Medium wide. Momo sits back in one wide wooden rocking chair, blanket round her shoulders, cushion held to her chest, feet off the floor.\n\n**Movement:** The chair rocks slowly back and forward.\n\n**Sings on screen:** no"
+  },
+  {
+   "id": "shot-04-still",
+   "type": "file",
+   "file": "examples/momos-one-kind-word/stills/shot-04.png",
+   "x": 1920,
+   "y": 480,
+   "width": 520,
+   "height": 920
+  },
+  {
+   "id": "shot-04-clip",
+   "type": "text",
+   "x": 1920,
+   "y": 1460,
+   "width": 520,
+   "height": 920,
+   "text": "*No clip yet* (shot-04)",
+   "color": "4"
+  },
+  {
+   "id": "shot-05",
+   "type": "group",
+   "label": "Shot 5",
+   "x": -30,
+   "y": 2470,
+   "width": 580,
+   "height": 2440
+  },
+  {
+   "id": "shot-05-text",
+   "type": "text",
+   "x": 0,
+   "y": 2500,
+   "width": 520,
+   "height": 420,
+   "text": "## Shot 5: Quilt\n\n> 9. One thick quilt lies on a seat.\n> 10. Momo tucks it round her feet.\n\n**Still:** Closer, slightly high angle. Momo in the chair, one thick turquoise quilt folded on her lap with its edge over her toes.\n\n**Movement:** Her paws pat the quilt down over her feet.\n\n**Sings on screen:** no"
+  },
+  {
+   "id": "shot-05-still",
+   "type": "file",
+   "file": "examples/momos-one-kind-word/stills/shot-05.png",
+   "x": 0,
+   "y": 2980,
+   "width": 520,
+   "height": 920
+  },
+  {
+   "id": "shot-05-clip",
+   "type": "text",
+   "x": 0,
+   "y": 3960,
+   "width": 520,
+   "height": 920,
+   "text": "*No clip yet* (shot-05)",
+   "color": "4"
+  },
+  {
+   "id": "shot-06",
+   "type": "group",
+   "label": "Shot 6",
+   "x": 610,
+   "y": 2470,
+   "width": 580,
+   "height": 2440
+  },
+  {
+   "id": "shot-06-text",
+   "type": "text",
+   "x": 640,
+   "y": 2500,
+   "width": 520,
+   "height": 420,
+   "text": "## Shot 6: Reading\n\n> 11. Momo helps her friends all day.\n> 12. Now she helps herself this way.\n\n**Still:** Wide from the aisle. Momo in the rocking chair under the quilt, reading one open book; the shelf fills the top of the frame, lamp low at the left.\n\n**Movement:** She reads, then looks up at the camera with a small closed smile.\n\n**Sings on screen:** no"
+  },
+  {
+   "id": "shot-06-still",
+   "type": "file",
+   "file": "examples/momos-one-kind-word/stills/shot-06.png",
+   "x": 640,
+   "y": 2980,
+   "width": 520,
+   "height": 920
+  },
+  {
+   "id": "shot-06-clip",
+   "type": "text",
+   "x": 640,
+   "y": 3960,
+   "width": 520,
+   "height": 920,
+   "text": "*No clip yet* (shot-06)",
+   "color": "4"
+  },
+  {
+   "id": "shot-07",
+   "type": "group",
+   "label": "Shot 7",
+   "x": 1250,
+   "y": 2470,
+   "width": 580,
+   "height": 2440
+  },
+  {
+   "id": "shot-07-text",
+   "type": "text",
+   "x": 1280,
+   "y": 2500,
+   "width": 520,
+   "height": 420,
+   "text": "## Shot 7: The secret book\n\n> 13. Momo takes her time to rest.\n> 14. Slow and soft is what is best.\n\n**Still:** Medium wide, full body. Momo stands in the aisle holding the book she pulled from the shelf; in front of her a wooden box bed with a turquoise mattress and a coral cushion has risen out of a trap door and sits level with the floor.\n\n**Movement:** The camera pushes in slowly; she stays still and blinks.\n\n**Sings on screen:** no"
+  },
+  {
+   "id": "shot-07-still",
+   "type": "file",
+   "file": "examples/momos-one-kind-word/stills/shot-07.png",
+   "x": 1280,
+   "y": 2980,
+   "width": 520,
+   "height": 920
+  },
+  {
+   "id": "shot-07-clip",
+   "type": "text",
+   "x": 1280,
+   "y": 3960,
+   "width": 520,
+   "height": 920,
+   "text": "*No clip yet* (shot-07)",
+   "color": "4"
+  },
+  {
+   "id": "shot-08",
+   "type": "group",
+   "label": "Shot 8",
+   "x": 1890,
+   "y": 2470,
+   "width": 580,
+   "height": 2440
+  },
+  {
+   "id": "shot-08-text",
+   "type": "text",
+   "x": 1920,
+   "y": 2500,
+   "width": 520,
+   "height": 420,
+   "text": "## Shot 8: Asleep\n\n> 15. One warm word stays in her head.\n> 16. 'You are kind.' Then off to bed.\n\n**Still:** Medium, high angle. Momo asleep in the wooden box bed, eyes closed, head on the coral cushion, quilt over her feet, blanket round her shoulders; the lamp on the floor beside the bed.\n\n**Movement:** The camera pushes in slowly; her eyes stay closed.\n\n**Sings on screen:** no"
+  },
+  {
+   "id": "shot-08-still",
+   "type": "file",
+   "file": "examples/momos-one-kind-word/stills/shot-08.png",
+   "x": 1920,
+   "y": 2980,
+   "width": 520,
+   "height": 920
+  },
+  {
+   "id": "shot-08-clip",
+   "type": "text",
+   "x": 1920,
+   "y": 3960,
+   "width": 520,
+   "height": 920,
+   "text": "*No clip yet* (shot-08)",
+   "color": "4"
+  }
+ ],
+ "edges": [
+  {
+   "id": "e-1",
+   "fromNode": "shot-01",
+   "fromSide": "right",
+   "toNode": "shot-02",
+   "toSide": "left"
+  },
+  {
+   "id": "e-2",
+   "fromNode": "shot-02",
+   "fromSide": "right",
+   "toNode": "shot-03",
+   "toSide": "left"
+  },
+  {
+   "id": "e-3",
+   "fromNode": "shot-03",
+   "fromSide": "right",
+   "toNode": "shot-04",
+   "toSide": "left"
+  },
+  {
+   "id": "e-4",
+   "fromNode": "shot-04",
+   "fromSide": "right",
+   "toNode": "shot-05",
+   "toSide": "left"
+  },
+  {
+   "id": "e-5",
+   "fromNode": "shot-05",
+   "fromSide": "right",
+   "toNode": "shot-06",
+   "toSide": "left"
+  },
+  {
+   "id": "e-6",
+   "fromNode": "shot-06",
+   "fromSide": "right",
+   "toNode": "shot-07",
+   "toSide": "left"
+  },
+  {
+   "id": "e-7",
+   "fromNode": "shot-07",
+   "fromSide": "right",
+   "toNode": "shot-08",
+   "toSide": "left"
+  }
+ ]
+}
