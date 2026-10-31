@@ -19,8 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
---- NOTE ON MODEL WEIGHTS ---
-This repository contains NO model weights. It contains manifests that point at
-third-party downloads. Each model carries its own licence, which you accept
-with the model provider, not with this project. See recipe/MODEL-LICENCES.md.
