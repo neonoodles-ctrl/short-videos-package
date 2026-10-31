@@ -242,7 +242,7 @@ def main() -> int:
     args = ap.parse_args()
 
     server = args.server.rstrip("/")
-    graph = json.loads(args.workflow.read_text())
+    graph = json.loads(args.workflow.read_text(encoding="utf-8"))
     if args.check:
         return check(server, graph)
 
@@ -256,7 +256,7 @@ def main() -> int:
     for item in args.text:
         target, path = item.split("=", 1)
         title, _, inp = target.partition(".")
-        text = Path(path).read_text().strip()
+        text = Path(path).read_text(encoding="utf-8").strip()
         for nid in find_nodes(graph, title):
             inputs = graph[nid]["inputs"]
             keys = [inp] if inp else [k for k in ("text", "prompt", "tags", "caption") if k in inputs][:1]

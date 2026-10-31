@@ -44,7 +44,7 @@ def lyric_lines_from_text(text: str) -> list[str]:
 
 def read_episode(path: Path) -> tuple[list[str], list[tuple[int, int]]]:
     """Return (lyric lines, shot line ranges) from an episode.md made from templates/episode.md."""
-    text = path.read_text()
+    text = path.read_text(encoding="utf-8")
     lyric = re.search(r"^## Lyric.*?$(.*?)(?=^## )", text, re.S | re.M)
     if not lyric:
         raise SystemExit(f"{path}: no '## Lyric' section")
@@ -105,18 +105,30 @@ def transcribe(path: Path, prompt: str, model: str, device: str) -> tuple[list[d
     pcm = subprocess.run(["ffmpeg", "-v", "error", "-i", str(path), "-ac", "1", "-ar", "16000", "-f", "f32le", "-"],
                          capture_output=True, check=True).stdout
     audio = np.frombuffer(pcm, dtype=np.float32)
-    compute = "int8" if device == "cpu" else "default"
-    wm = WhisperModel(model, device=device, compute_type=compute)
-    passes = []
-    for hint in (prompt[:800], None):
-        segments, _ = wm.transcribe(audio, language="en", word_timestamps=True, initial_prompt=hint,
-                                    condition_on_previous_text=False, vad_filter=False)
-        words = []
-        for seg in segments:
-            for w in seg.words or []:
-                if norm(w.word):
-                    words.append({"word": w.word.strip(), "start": round(w.start, 3), "end": round(w.end, 3)})
-        passes.append(words)
+
+    def run(dev: str) -> list[list[dict]]:
+        wm = WhisperModel(model, device=dev, compute_type="int8" if dev == "cpu" else "default")
+        passes = []
+        for hint in (prompt[:800], None):
+            segments, _ = wm.transcribe(audio, language="en", word_timestamps=True, initial_prompt=hint,
+                                        condition_on_previous_text=False, vad_filter=False)
+            words = []
+            for seg in segments:
+                for w in seg.words or []:
+                    if norm(w.word):
+                        words.append({"word": w.word.strip(), "start": round(w.start, 3), "end": round(w.end, 3)})
+            passes.append(words)
+        return passes
+
+    try:
+        passes = run(device)
+    except (RuntimeError, OSError, ValueError) as err:
+        # faster-whisper's GPU build needs CUDA 12 cuBLAS/cuDNN; machines with only CUDA 13 (or
+        # none) fail during transcription, not at load. The CPU is slower but gives the same words.
+        if device == "cpu":
+            raise
+        print(f"GPU transcription failed ({str(err).splitlines()[0]}); using the CPU instead.", file=sys.stderr)
+        passes = run("cpu")
     return passes[0], passes[1]
 
 
@@ -153,14 +165,14 @@ def main() -> int:
     ap.add_argument("--lines-per-shot", type=int, default=2)
     ap.add_argument("--lead", type=float, default=0.25, help="cut this many seconds before a shot's first word")
     ap.add_argument("--model", default="medium.en", help="Whisper model (default %(default)s)")
-    ap.add_argument("--device", default="auto", help="cpu, cuda or auto")
+    ap.add_argument("--device", default="auto", help="cpu, cuda or auto (auto falls back to the CPU if the GPU fails)")
     ap.add_argument("--out", type=Path, default=Path("slots.json"))
     args = ap.parse_args()
 
     if args.episode:
         lines, shots = read_episode(args.episode)
     else:
-        lines, shots = lyric_lines_from_text(args.lyrics.read_text()), []
+        lines, shots = lyric_lines_from_text(args.lyrics.read_text(encoding="utf-8")), []
     if args.shots:
         shots = shots_from_spec(args.shots)
     if not shots:
@@ -189,7 +201,7 @@ def main() -> int:
     result = {"song": str(args.song), "song_seconds": round(duration, 3), "words_heard": f"{heard}/{total}",
               "words_heard_without_hint": f"{plain_heard}/{total}", "missing_lines": missing,
               "lines": timed, "shots": slots}
-    args.out.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n")
+    args.out.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"{args.out}: {len(slots)} shots, song {duration:.1f} s, words heard {heard}/{total} "
           f"({plain_heard}/{total} without the lyric as a hint)")
     for s in slots:

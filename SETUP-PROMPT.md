@@ -43,7 +43,7 @@ Never put ComfyUI, models or Obsidian inside this repository folder.
    ComfyUI desktop app, a portable folder, or a git checkout, and use that one). Follow the
    official instructions for this operating system:
    - Desktop app (Windows, macOS): https://www.comfy.org/download
-   - Manual install (Linux, Windows, macOS): https://github.com/comfyanonymous/ComfyUI#installing
+   - Manual install (Linux, Windows, macOS): https://github.com/Comfy-Org/ComfyUI#installing
    - Windows portable: https://docs.comfy.org/installation/comfyui_portable_windows
    Update ComfyUI to the newest release: these workflows need its built-in Flux.2, Wan 2.2,
    ACE-Step 1.5, MiniMax H3 and MiniMax Music 3 nodes. Start it and confirm

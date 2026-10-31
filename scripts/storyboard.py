@@ -23,7 +23,7 @@ CARD_W, TEXT_H, GAP = 520, 420, 60
 
 
 def parse(path: Path):
-    text = path.read_text()
+    text = path.read_text(encoding="utf-8")
     title = re.search(r'^title:\s*"?(.*?)"?\s*$', text, re.M)
     lyric = re.search(r"^## Lyric.*?$(.*?)(?=^## )", text, re.S | re.M)
     lines = {}
@@ -134,7 +134,7 @@ def main() -> int:
                           "toNode": gid, "toSide": "left"})
         prev = number
     a.out.parent.mkdir(parents=True, exist_ok=True)
-    a.out.write_text(json.dumps({"nodes": nodes, "edges": edges}, indent=1, ensure_ascii=False) + "\n")
+    a.out.write_text(json.dumps({"nodes": nodes, "edges": edges}, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"{a.out}: {len(shots)} shots")
     return 0
 

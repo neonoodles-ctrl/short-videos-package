@@ -29,7 +29,7 @@ def main() -> int:
     ap.add_argument("--offset", type=float, default=0.0, help="shift every subtitle (e.g. if you add an intro)")
     a = ap.parse_args()
 
-    lines = json.loads(a.slots.read_text())["lines"]
+    lines = json.loads(a.slots.read_text(encoding="utf-8"))["lines"]
     cues, unsure = [], []
     for i, line in enumerate(lines):
         start = line["start"] + a.offset

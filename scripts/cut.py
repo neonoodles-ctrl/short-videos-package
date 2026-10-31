@@ -42,13 +42,16 @@ def seconds(path: Path) -> float:
 
 
 def load_slots(path: Path) -> list[dict]:
-    return json.loads(path.read_text())["shots"]
+    return json.loads(path.read_text(encoding="utf-8"))["shots"]
 
 
 def cmd_slice(a) -> int:
     start, end = a.start, a.end
     if a.slots:
-        shot = next(s for s in load_slots(a.slots) if s["shot"] == a.shot)
+        shots = load_slots(a.slots)
+        shot = next((s for s in shots if s["shot"] == a.shot), None)
+        if shot is None:
+            raise SystemExit(f"{a.slots} has no shot {a.shot}; its shots are {', '.join(str(s['shot']) for s in shots)}")
         start, end = shot["start"], shot["end"]
     if start is None or end is None:
         raise SystemExit("give --slots and --shot, or --start and --end")
@@ -124,7 +127,7 @@ def cmd_assemble(a) -> int:
              "-c:v", "libx264", "-crf", "14", "-preset", "medium", str(silent)])
     else:
         lst = work / "list.txt"
-        lst.write_text("".join(f"file '{p.resolve()}'\n" for p in segs))
+        lst.write_text("".join(f"file '{p.resolve()}'\n" for p in segs), encoding="utf-8")
         run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", str(lst), "-c", "copy", str(silent)])
 
     a.out.parent.mkdir(parents=True, exist_ok=True)
