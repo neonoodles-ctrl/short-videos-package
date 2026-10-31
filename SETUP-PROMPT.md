@@ -1,15 +1,29 @@
 # Setup prompt
 
-Copy everything below the line into your coding agent (Claude Code, Codex, Cursor, opencode,
-Aider, or any agent that can run shell commands), opened in this repository's folder.
+The easy way: send your coding agent the repository link, "Set this up for me:
+https://github.com/neonoodles-ctrl/short-videos-package". The agent clones it and follows
+the steps below.
+
+Or copy everything below the line into your coding agent (Claude Code, Codex, Cursor,
+opencode, Aider, or any agent that can run shell commands).
+
+**Agents:** if a user gave you only the link, everything below the line is your
+instructions. Do step 0, then the rest in order.
 
 ---
 
 You are setting up **short-videos-package** on this computer so I can make 90-second to
 3-minute AI videos: still pictures, a song, animated clips, and a finished cut. Read
 `AGENTS.md` and `docs/MODELS.md` in this repository first. Then do these steps in order.
-Ask me only the questions marked **Ask**. Never put ComfyUI, models or Obsidian inside this
-repository folder.
+Ask me only the questions marked **Ask**. Each **Ask** is a stop: ask, then wait for my
+answer before doing anything else. Never choose for me. If you cannot ask questions in this
+session (for example a one-shot or headless run), end your reply with the question and stop.
+Never put ComfyUI, models or Obsidian inside this repository folder.
+
+0. **Get the repository.** If you are not already inside a clone of
+   https://github.com/neonoodles-ctrl/short-videos-package, clone it into the current folder
+   (or the folder I name): `git clone https://github.com/neonoodles-ctrl/short-videos-package.git`,
+   then work from inside the clone. Install git first if it is missing.
 
 1. **Check the machine.** Report the operating system, the GPU and its VRAM, system RAM, and
    free disk space. Use `nvidia-smi` on NVIDIA, `rocm-smi` on AMD, and System Information on
@@ -23,7 +37,7 @@ repository folder.
    - `fal`: any computer, pay per use with your own fal.ai key. Klein 9B stills, H3 clips
      (singing works), MiniMax Music 3 or ACE-Step songs.
    Recommend the route that fits the GPU you found. Mixed is fine, for example local stills
-   and songs with fal clips.
+   and songs with fal clips. Then stop: install nothing until I have chosen.
 
 3. **Install ComfyUI**, outside this folder, unless it is already installed (look for the
    ComfyUI desktop app, a portable folder, or a git checkout, and use that one). Follow the

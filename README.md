@@ -8,16 +8,34 @@ It is the method behind the [Ember Hills](https://www.youtube.com/@ember-hills) 
 channel, written down so any agent can follow it, for kids' songs or anything else: music
 videos, comedy, horror, explainers.
 
+<p align="center">
+  <img src="examples/momos-one-kind-word/preview.gif" width="270" alt="Eight shots of Momo, a purple felt bulldog, in a cosy library at bedtime">
+</p>
+<p align="center"><sub>The worked example, made with this package on one 16 GB graphics card:
+Flux.2 Klein 9B stills and Wan 2.2 clips (<a href="examples/momos-one-kind-word/">how it was made</a>,
+<a href="https://youtu.be/V-PmF7g5i2o">the original episode</a>).</sub></p>
+
 ## Start here
 
-1. Open this folder in your coding agent (Claude Code, Codex, Cursor, opencode, Aider ...).
-2. Paste the prompt from [`SETUP-PROMPT.md`](SETUP-PROMPT.md).
-3. The agent checks your computer, asks whether you want local, API or both, installs
-   ComfyUI and the right models (outside this folder), asks whether you want Obsidian for the
-   storyboard and how you want to review work (for example
-   [Agent Previewer](https://github.com/neonoodles-ctrl/agent-previewer)), and runs one test
-   of each workflow.
-4. Then ask it to make a video. It follows [`AGENTS.md`](AGENTS.md).
+Send this link to your coding agent (Claude Code, Codex, Cursor, opencode, Aider, or any
+agent that can run shell commands):
+
+> Set this up for me: https://github.com/neonoodles-ctrl/short-videos-package
+
+The agent clones this repository and follows [`SETUP-PROMPT.md`](SETUP-PROMPT.md): it checks
+your computer, asks whether you want local, API or both, installs ComfyUI and the right
+models (outside the repository folder), asks whether you want Obsidian for the storyboard and
+how you want to review work (for example
+[Agent Previewer](https://github.com/neonoodles-ctrl/agent-previewer)), and runs one test of
+each workflow. Then ask it to make a video; it follows [`AGENTS.md`](AGENTS.md).
+
+Already cloned it? Open the folder in your agent and paste the prompt from `SETUP-PROMPT.md`.
+
+**If you are an AI agent and were given this link:** run
+`git clone https://github.com/neonoodles-ctrl/short-videos-package.git` in the current folder
+(or the one the user names), then read `SETUP-PROMPT.md` in the clone and carry out its
+steps as your instructions, starting at step 1. Ask the user the questions it marks **Ask**,
+and install nothing before the user has answered step 2.
 
 ComfyUI, the models and Obsidian are not in this repository: it holds links, instructions,
 workflows and five small scripts.
